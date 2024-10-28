@@ -6,7 +6,22 @@
             "runtime": "vercel-php@0.7.1"
         }
     },
+    "builds": [
+        {
+            "src": "public/**/*",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "api/index.php",
+            "use": "vercel-php"
+        }
+    ],
+
     "routes": [
+        {
+            "src": "/(css|js|images)/(.*)",
+            "dest": "/public/$1/$2"
+        },
         {
             "src": "/build/(.*)",
             "dest": "/build/$1"
