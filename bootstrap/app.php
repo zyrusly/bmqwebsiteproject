@@ -46,7 +46,7 @@ $app->singleton(
 
 $app->withMiddleware(function (Middleware $middleware) {
     $middleware->trustProxies(at: '*');
-})
+});
 
 /*
 |--------------------------------------------------------------------------
