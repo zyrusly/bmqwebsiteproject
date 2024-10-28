@@ -1,8 +1,5 @@
 <?php
 
-use Illuminate\Routing\Controllers\Middleware;
-
-
 /*
 |--------------------------------------------------------------------------
 | Create The Application
@@ -43,11 +40,6 @@ $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
     App\Exceptions\Handler::class
 );
-
-// $app->withMiddleware(function (Middleware $middleware) {
-//     $middleware->trustProxies(at: '*');
-// });
-
 /*
 |--------------------------------------------------------------------------
 | Return The Application
